@@ -5,21 +5,30 @@
    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <title>The social network</title>
 </head>
-<body>
-  
-  <div class="container">
+<body ng-app="app">
+
+  <div ng-controller="PostsCtrl" class="container">
     <h1>Recent Posts</h1>
     <ul class="list-group">
-      <li class="list-group-item">
-        <strong>@dickeyxxx</strong>
-        <span>Node rules! Man</span>
-      </li>
-      <li class="list-group-item">
-        <strong>@jeffreeway</strong>
-        <span>Angular is the best</span>
+      <li ng-repeat="post in posts" class="list-group-item">
+        <strong>{{ post.username }}</strong>
+        <span>{{ post.body }}</span>
       </li>
     </ul>
   </div>
+
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+  <script type="text/javascript">
+    var app = angular.module('app', []);
+    app.controller('PostsCtrl', function ($scope) {
+      $scope.posts = [{
+        username: 'dickeyxxx',
+        body: 'Node rules!'
+      },{
+        username: 'jefdickey',
+        body: 'Trying Angular dude'
+      }];
+    });
+  </script>
 </body>
 </html>
