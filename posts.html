@@ -33,11 +33,13 @@
       }];
 
       $scope.addPost = function () {
-        $scope.posts.unshift({
-          username: 'dickeyxxx',
-          body: $scope.postBody
-        });
-        $scope.postBody = null;
+        if ($scope.postBody) {
+          $scope.posts.unshift({
+            username: 'dickeyxxx',
+            body: $scope.postBody
+          });
+          $scope.postBody = null;
+        }
       };
     });
   </script>
