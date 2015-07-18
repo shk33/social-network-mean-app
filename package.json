@@ -1,0 +1,22 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "A sample app for learning MEAN Stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "none"
+  },
+  "dependencies": {
+    "body-parser": "1.4.3",
+    "express": "4.4.4"
+  },
+  "keywords": [
+    "mean",
+    "mongo",
+    "angular",
+    "node",
+    "express"
+  ],
+  "author": "dickeyxxx",
+  "license": "MIT"
+}
