@@ -10,6 +10,7 @@
     "body-parser": "1.4.3",
     "express": "4.4.4",
     "gulp": "3.9.0",
+    "gulp-concat": "^2.6.0",
     "mongoose": "3.8.17"
   },
   "keywords": [
