@@ -1,5 +1,5 @@
-var app = angular.module('app', []);
-app.controller('PostsCtrl', function ($scope, PostsSvc) {
+angular.module('app').
+controller('PostsCtrl', function ($scope, PostsSvc) {
   PostsSvc.fetch().success(function (posts) {
     $scope.posts = posts;
   });
@@ -14,16 +14,5 @@ app.controller('PostsCtrl', function ($scope, PostsSvc) {
         $scope.postBody = null;
       });
     }
-  };
-});
-
-app.service('PostsSvc', function($http){
-  this.fetch = function () {
-    return $http.get('/api/posts');
-  };
-
-  this.create = function (post) {
-    return $http.post('/api/posts',post);
-
   };
 });
