@@ -14,6 +14,9 @@
         <li ng-if="!currentUser"><a href="/#/register">Register</a></li>
         <li ng-if="!currentUser"><a href="/#/login">Login</a></li>
       </ul>
+      <button ng-if="currentUser" ng-click="logout()" class="btn btn-deafult navbar-text navbar-right">
+        Logout
+      </button>
       <p ng-if="currentUser" class="navbar-text navbar-right">
         Signed in as {{ currentUser.username}}
       </p>

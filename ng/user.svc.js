@@ -28,4 +28,8 @@ angular.module('app')
       return svc.login(username, password);
     });
   };
+
+  svc.removeJwtHeader = function () {
+    delete $http.defaults.headers.common['X-Auth'];
+  };
 });
