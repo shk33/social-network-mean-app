@@ -19,4 +19,13 @@ angular.module('app')
       return svc.getUser();
     });
   };
+
+  svc.createUser = function (username, password) {
+    return $http.post('/api/users',{
+      username: username,
+      password: password
+    }).then(function (response) {
+      return svc.login(username, password);
+    });
+  };
 });
