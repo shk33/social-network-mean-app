@@ -10,9 +10,15 @@ controller('PostsCtrl', function ($scope, PostsSvc) {
         username: 'mcoronel',
         body: $scope.postBody
       }).success(function (post) {
-        $scope.posts.unshift(post);
         $scope.postBody = null;
       });
     }
   };
+
+  $scope.$on('ws:new_post', function (_, post) {
+    $scope.$apply(function () {
+      $scope.posts.unshift(post);
+    });
+  });
+
 });
