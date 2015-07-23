@@ -1,15 +1,14 @@
 angular.module('app').
 controller('PostsCtrl', function ($scope, PostsSvc) {
-  PostsSvc.fetch().success(function (posts) {
+  PostsSvc.fetch().then(function (posts) {
     $scope.posts = posts;
   });
 
   $scope.addPost = function () {
     if ($scope.postBody) {
       PostsSvc.create({
-        username: 'mcoronel',
         body: $scope.postBody
-      }).success(function (post) {
+      }).then(function (post) {
         $scope.postBody = null;
       });
     }
