@@ -5,3 +5,13 @@ Using gulp dev task to start watch:js, watch:css and dev:server
 ```
 gulp dev
 ```
+
+Running back-end test 
+```
+npm test
+```
+
+Running front-end test
+```
+karma start --single-run  
+```
