@@ -34,5 +34,9 @@
     "express"
   ],
   "author": "dickeyxxx",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "protractor": "2.1.0"
+  }
 }
