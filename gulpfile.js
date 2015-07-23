@@ -24,3 +24,4 @@ gulp.task('watch:js', ['js'], function () {
 });
 
 gulp.task('dev',['watch:js','watch:css','dev:server']);
+gulp.task('build', ['js', 'css']);
