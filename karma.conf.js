@@ -1,6 +1,6 @@
 module.exports = function(config) {
   config.set({
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai', 'sinon-chai'],
     files: [
       'assets/angular/angular.js',
       'assets/angular-route/angular-route.js',
