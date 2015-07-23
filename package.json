@@ -4,7 +4,8 @@
   "description": "A sample app for learning MEAN Stack",
   "main": "server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha && ./node_modules/.bin/protractor"
+    "test": "./node_modules/.bin/mocha && ./node_modules/.bin/protractor",
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "bcrypt": "0.8.3",
