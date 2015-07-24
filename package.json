@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha && ./node_modules/.bin/protractor",
-    "postinstall": "gulp build"
+    "postinstall": "gulp build",
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "0.8.3",
